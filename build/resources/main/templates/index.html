@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/default}">
+
+<div id="page" layout:fragment="content">
+    <div class="container">
+        <div class="mt-5">
+            <div class="text-center hero my-5">
+                <h1 class="mb-4">Demo Page</h1>
+                <p class="lead">
+                    This is just a demo for AUTH0 and Stripe API test
+                    <div class="mb-4">
+                    <ul class="navbar-nav d-none d-md-block">
+                    <li sec:authorize="isAuthenticated()">
+                            <div class="mb-4" th:text="${profile.get('name')}"></div>
+                    </li>
+
+                </ul>
+                    
+                    </div>
+                </p>
+            </div>
+
+            <hr/>
+        </div>
+    </div>
+</div>
+
+</html>
